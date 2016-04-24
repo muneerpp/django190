@@ -1,0 +1,17 @@
+<!--Doctype html-->
+
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+
+<h1>{{ title }} is working !!</h1>
+{% for obj in object_list %}
+
+    <a href='{{ obj.get_abs_url }}'>{{ obj.title }}</a><br>
+
+    {{ obj.timestamp }}<br>
+{% endfor %}
+
+</body>
+
+
+</html>
