@@ -22,6 +22,7 @@ from .views import (
     posts_list,
     posts_update,
     posts_delete,
+    account_balance,
 
 )
 
@@ -31,4 +32,6 @@ urlpatterns = [
     url(r'^$', posts_list),
     url(r'^update/$', posts_update),
     url(r'^delete/$', posts_delete),
+    url(r'^account_balance/$', account_balance),
+    
 ]

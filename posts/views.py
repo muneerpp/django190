@@ -12,7 +12,6 @@ def posts_create(request):
     }
     return render(request, "index.html", context)
 
-
 def posts_details(request, id=None):
     instance = get_object_or_404(Post, id=id)
 
@@ -56,3 +55,20 @@ def posts_delete(request):
 
     }
     return render(request, "index.html", context)
+
+
+def account_balance(request):
+    
+    customer_name = "James"
+    account_balance = "19,888"
+    next_due_date = "10-10-2016"
+    context = {
+        
+        "title" :"Test View",
+        "sum" : sum,
+        "customer_name":customer_name,
+        "balance":account_balance,
+        "next_due_date":next_due_date
+    }
+    
+    return render(request,"test_view.html",context)#view is rendered by test_view.html and context is used to pass variables to test_view.html
